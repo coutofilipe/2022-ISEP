@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe3f338d-af4e-4444-b435-ff220036d7d9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ant.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PL_Recursion Initial.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/esinf/Ex1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/build-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/build-impl.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/genfiles.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/genfiles.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/esinf/Labirinth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/esinf/Ex1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/esinf/Ex1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/esinf/LabirinthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/esinf/LabirinthTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP_Recursion/src/main/java/esinf/RecursionExercices.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TP_Recursion/src/main/java/esinf/RecursionExercices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP_Recursion/target/classes/esinf/RecursionExercices.class" beforeDir="false" afterPath="$PROJECT_DIR$/../TP_Recursion/target/classes/esinf/RecursionExercices.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +36,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/fmarquescouto-admin/Desktop/2022-ISEP/ESINF/Class Materials and Exercices/1.Recursion/PL_Recursion Initial"
+    "last_opened_file_path": "C:/Users/fmarquescouto-admin/Desktop/2022-ISEP/ESINF/Class Materials and Exercices/1.Recursion/PL_Recursion Initial",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RunManager">
@@ -83,6 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1663863251673</updated>
       <workItem from="1663863252838" duration="6613000" />
+      <workItem from="1663939726829" duration="14226000" />
     </task>
     <servers />
   </component>
