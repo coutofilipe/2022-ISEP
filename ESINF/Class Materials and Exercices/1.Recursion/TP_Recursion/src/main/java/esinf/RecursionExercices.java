@@ -12,15 +12,15 @@ public class RecursionExercices {
     
     /**
      *
-     * @param m first parcel
-     * @param n second parcel
+     * @param m first integer
+     * @param n second integer
      * @return the sum of the two parcels
      */
     public static int sum(int m, int n) {
         //base case
         if (m == 0 ) return n;
 
-        //
+        // recursive call
         return sum(m - 1, n + 1);
     }
     
@@ -30,8 +30,12 @@ public class RecursionExercices {
      * @return the number converted to binary base
      */
     public static String decimalToBinary(Integer d) {
-        
-        throw new UnsupportedOperationException("Not supported yet.");         
+        if (d.toString().equals(0))
+            return "0";
+
+        else
+
+        return "";
     }
     
     /**
