@@ -5,10 +5,12 @@
  */
 package esinf;
 
+import org.w3c.dom.ls.LSOutput;
+
 /**
  *
  */
-public class RecursionExercices {
+public class RecursionExercise {
     
     /**
      *
@@ -62,5 +64,5 @@ public class RecursionExercices {
         
         throw new UnsupportedOperationException("Not supported yet.");
     }
-    
+
 }

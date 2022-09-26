@@ -1,5 +1,11 @@
 package esinf;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+
 public class Ex1 {
 
     /*
@@ -139,17 +145,52 @@ public class Ex1 {
         return array[row][col] + sumElementsArray(array, row, ++col);
     }
 
+
+
     public static void main(String[] args) {
 //        System.out.println(reverseString("use the force"));
 //        System.out.println(product(6, 6));
-//        System.out.println(mdc(48, 30));
+        System.out.println(mdc(48, 30));
 //        System.out.println(stringToInt("123456789"));
 //        System.out.println();
 
 //        System.out.println(numPalindrome(101, 0));
 
-        int[][] array = {{1, 2}, {3, 4}};
-        System.out.println(sumElementsArray(array, 0, 0));
+//        int[][] array = {{1, 2}, {3, 4}};
+//        System.out.println(sumElementsArray(array, 0, 0));
+
+
+        try {
+            List<String> list = whenReadSmallFileJava7_thenCorrect();
+            List<Fruta> frutas = list.stream().map(s -> function(s)).toList();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
 
     }
+
+    static  Fruta function(String line) {
+        // fazer o split da linha por virgulas
+        line.split(",");
+        Fruta fruta = new Fruta();
+        fruta.setArea("afganistao");
+        fruta.setItem("apples");
+        fruta.setYear("1961");
+        fruta.setValue("151000");
+        return fruta;
+    }
+    public static List<String> whenReadSmallFileJava7_thenCorrect()
+            throws IOException {
+        String expected_value = "Hello, world!";
+
+        Path path = Paths.get("C:\\Users\\fmarquescouto-admin\\Desktop\\2022-ISEP\\ESINF\\Sprint 1\\FAOSTAT_data_en_9-7-2022_BIG.csv");
+
+        List<String> read = Files.readAllLines(path);
+        return read;
+    }
+
+
 }

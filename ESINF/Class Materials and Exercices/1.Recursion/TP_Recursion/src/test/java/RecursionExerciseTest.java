@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-import esinf.RecursionExercices;
+import esinf.RecursionExercise;
 import org.testng.annotations.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -12,9 +12,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  *
  */
-public class RecursionExercicesTest {
+public class RecursionExerciseTest {
     
-    public RecursionExercicesTest() {
+    public RecursionExerciseTest() {
     }
 
     /**
@@ -26,13 +26,13 @@ public class RecursionExercicesTest {
         int m = 10;
         int n = 20;
         int expResult = m+n;
-        int result = RecursionExercices.sum(m, n);
+        int result = RecursionExercise.sum(m, n);
         assertEquals(expResult, result);
         
         m = 0;
         n = 20;
         expResult = m+n;
-        result = RecursionExercices.sum(m, n);
+        result = RecursionExercise.sum(m, n);
         assertEquals(expResult, result);        
     }
 
@@ -44,12 +44,12 @@ public class RecursionExercicesTest {
         System.out.println("decimalToBinary");
         Integer d = 6;
         String expResult = "110";
-        String result = RecursionExercices.decimalToBinary(d);
+        String result = RecursionExercise.decimalToBinary(d);
         assertEquals(expResult, result);
         
         d = 29;
         expResult = "11101";
-        result = RecursionExercices.decimalToBinary(d);
+        result = RecursionExercise.decimalToBinary(d);
         assertEquals(expResult, result);        
     }
 
@@ -61,12 +61,12 @@ public class RecursionExercicesTest {
         System.out.println("isPrime");
         int d = 71;
         boolean expResult = true;
-        boolean result = RecursionExercices.isPrime(d);
+        boolean result = RecursionExercise.isPrime(d);
         assertEquals(expResult, result);
         
         d = 75;
         expResult = false;
-        result = RecursionExercices.isPrime(d);
+        result = RecursionExercise.isPrime(d);
         assertEquals(expResult, result);
     }
 
@@ -78,12 +78,12 @@ public class RecursionExercicesTest {
         System.out.println("isPalindrome");
         String word = "SOPAPOS";
         boolean expResult = true;
-        boolean result = RecursionExercices.isPalindrome(word);
+        boolean result = RecursionExercise.isPalindrome(word);
         assertEquals(expResult, result);
         
         word = "POSSOS";
         expResult = false;
-        result = RecursionExercices.isPalindrome(word);
+        result = RecursionExercise.isPalindrome(word);
         assertEquals(expResult, result);        
     }
     
