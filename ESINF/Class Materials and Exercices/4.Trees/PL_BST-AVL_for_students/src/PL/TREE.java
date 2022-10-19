@@ -51,7 +51,7 @@ public class TREE<E extends Comparable<E>> extends BST<E>{
         if (node != null) {
             ascSubtree(node.getLeft(), snapshot);
             snapshot.add(node.getElement());
-            ascSubtree(node.getRight(), snapshot);
+            desSubtree(node.getRight(), snapshot);
         }
     }
 
@@ -60,8 +60,8 @@ public class TREE<E extends Comparable<E>> extends BST<E>{
         // In-order decrescente
         if (node != null) {
             desSubtree(node.getRight(), snapshot);
-            desSubtree(node.getLeft(), snapshot);
             snapshot.add(node.getElement());
+            desSubtree(node.getLeft(), snapshot);
         }
     }
 
