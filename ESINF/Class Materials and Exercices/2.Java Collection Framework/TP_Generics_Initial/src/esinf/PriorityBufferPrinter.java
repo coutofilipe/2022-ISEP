@@ -5,10 +5,7 @@
  */
 package esinf;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 import java.util.function.Consumer;
 import java.util.stream.IntStream;
 
@@ -47,19 +44,29 @@ public class PriorityBufferPrinter<E extends Document> implements Iterable<E> {
      * @return      true if the buffer has space, false otherwise
      */
     public Boolean addDocument(E doc) {
-        PriorityBufferPrinter printerBuffer = new PriorityBufferPrinter(maxSize);
-        if (printerBuffer.maxSize <= 0) {
+        if (buffer.size() >= maxSize) {
             return false;
         } else {
             // se tiver espaço adicionar o doc ao buffer considerando as prioridades;
-            for (int i = 0; i < printerBuffer.maxSize; i++ ) {
-                if(printerBuffer.getDocument().getPriority().compareTo(doc.getPriority()) > 0 ) {
-                    printerBuffer.
+            // Collections.sort(buffer);
+            for (int i = buffer.size() - 1; i == 0; i--) {
+                if (buffer.get(0).getPriority() < buffer.get(i).getPriority()) {
+
                 }
             }
 
         }
         return true;
+    }
+
+    /**
+     * Swaps two vector positions                  O(1)
+     */
+    public static <E> void swap(List[] v, int i, int j) {
+
+        List temp = v[i];
+        v[i] = v[j];
+        v[j] = temp;
     }
     
      /**

@@ -9,7 +9,7 @@ package esinf;
  *
  * @author DEI/ISEP
  */
-public interface Document extends Comparable <Document> {
+    public interface Document extends Comparable <Document> {
     Integer getPriority();
     Integer getSize();
     String getName();
