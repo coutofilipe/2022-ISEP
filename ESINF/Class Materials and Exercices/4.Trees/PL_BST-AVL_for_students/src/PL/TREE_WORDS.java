@@ -3,8 +3,6 @@ package PL;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -32,7 +30,7 @@ public class TREE_WORDS extends BST<TextWord> {
      */
     @Override
     public void insert(TextWord element){
-        throw new UnsupportedOperationException("Not supported yet.");
+        root = insert(element, root);
     }
     
     private Node<TextWord> insert(TextWord element, Node<TextWord> node){

@@ -66,7 +66,8 @@ public class TREE<E extends Comparable<E>> extends BST<E>{
     }
 
     /**
-     * Returns the tree without leaves.
+     * returns a new binary search tree, identical to the original, but
+     * without the leaves.
      *
      * @return tree without leaves
      */
@@ -79,7 +80,7 @@ public class TREE<E extends Comparable<E>> extends BST<E>{
     }
 
     /**
-     * @return the the number of nodes by level.
+     * @return the number of nodes by level.
      */
     public int[] numNodesByLevel() {
 

@@ -1,6 +1,7 @@
 package PL;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -242,7 +243,10 @@ public class BST<E extends Comparable<E>> implements BSTInterface<E> {
      * @return iterable collection of the tree's elements reported in pre-order
      */
     public Iterable<E> preOrder() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        List<E> snapshot = new ArrayList<>();
+        if (root != null)
+            preOrderSubtree(root, snapshot);   // fill the snapshot recursively
+        return snapshot;
     }
 
     /**
@@ -253,7 +257,10 @@ public class BST<E extends Comparable<E>> implements BSTInterface<E> {
      * @param snapshot a list to which results are appended
      */
     private void preOrderSubtree(Node<E> node, List<E> snapshot) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        if (node == null) return;
+        snapshot.add(node.getElement());
+        preOrderSubtree(node.getLeft(), snapshot);
+        preOrderSubtree(node.getRight(), snapshot);
     }
 
     /**
@@ -262,7 +269,10 @@ public class BST<E extends Comparable<E>> implements BSTInterface<E> {
      * @return iterable collection of the tree's elements reported in post-order
      */
     public Iterable<E> posOrder() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        List<E> snapshot = new ArrayList<>();
+        if (root != null)
+            posOrderSubtree(root, snapshot);   // fill the snapshot recursively
+        return snapshot;
     }
 
     /**
@@ -273,7 +283,10 @@ public class BST<E extends Comparable<E>> implements BSTInterface<E> {
      * @param snapshot a list to which results are appended
      */
     private void posOrderSubtree(Node<E> node, List<E> snapshot) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        if (node == null) return;
+        posOrderSubtree(node.getLeft(), snapshot);
+        posOrderSubtree(node.getRight(), snapshot);
+        snapshot.add(node.getElement());
     }
 
     /**
@@ -282,11 +295,22 @@ public class BST<E extends Comparable<E>> implements BSTInterface<E> {
      */
 
     public Map<Integer, List<E>> nodesByLevel() {
-        throw new UnsupportedOperationException("Not supported yet.");
+
+        Map<Integer, List<E>> map = new HashMap<>();
+        processBstByLevel(root, map, 0);
+        return map;
     }
 
     private void processBstByLevel(Node<E> node, Map<Integer, List<E>> result, int level) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        if(node != null) {
+            if(!result.containsKey(level)) {
+                result.put(level, new ArrayList<E>());
+            }
+            List<E> list = result.get(level);
+            list.add(node.getElement());
+            processBstByLevel(node.getLeft(), result, level +1);
+            processBstByLevel(node.getRight(), result, level +1);
+        }
     }
 
 //#########################################################################
