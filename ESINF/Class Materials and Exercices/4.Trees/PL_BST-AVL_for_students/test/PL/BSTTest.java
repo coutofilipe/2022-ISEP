@@ -171,7 +171,6 @@ public class BSTTest {
         List<Integer> lExpected = Arrays.asList(preorderT);
         assertEquals("preOrder should be "+lExpected.toString(), lExpected, instance.preOrder());
     }
-
     /**
      * Test of posOrder method, of class BST.
      */

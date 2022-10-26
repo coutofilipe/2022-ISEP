@@ -1,0 +1,8 @@
+PL\AVL.class
+PL\TextWord.class
+PL\TREE_WORDS.class
+PL\BSTInterface.class
+PL\BST$Node.class
+PL\BST.class
+PL\TREE.class
+PL\Utils.class
