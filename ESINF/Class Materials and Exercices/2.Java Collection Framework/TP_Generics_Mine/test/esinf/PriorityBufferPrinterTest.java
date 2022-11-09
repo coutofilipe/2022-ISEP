@@ -136,18 +136,18 @@ public class PriorityBufferPrinterTest {
      * Test of delDocumentsAbove method, of class PriorityBufferPrinter.
      */
     @Test
-    public void testDelDocumentsAbove() {
+    public void testDelDocumentsAboveSize() {
         System.out.println("delDocuments");
         
         Integer size = 1000;
-        PriorityBufferPrinter <Document> instance=new PriorityBufferPrinter <>(maxSize);
+        PriorityBufferPrinter <Document> instance = new PriorityBufferPrinter <>(maxSize);
         
         // add all the documents in setDoc (functional stream style)
         setDoc.stream().forEach( doc -> instance.addDocument(doc) );
         
         // Try the deletion of Documents above size 1000 and check the result
         Boolean expResult = true;
-        Boolean result = instance.delDocumentsAbove(size);
+        Boolean result = instance.delDocumentsAboveSize(size);
         assertEquals("There should be documents above size 1000", expResult, result);
         
         // Actually check the deletion of Documents above size 1000

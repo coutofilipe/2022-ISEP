@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package PL;
 
 import org.junit.Before;
@@ -34,14 +29,14 @@ public class TREETest {
 
     @Before
     public void setUp(){
-        instance = new TREE();
+        instance = new TREE<>();
         for(int i : arr)
             instance.insert(i);
     }
 
     @Before
     public void setUp2() {
-        instance2 = new TREE();
+        instance2 = new TREE<>();
         for(int i : arr2)
             instance2.insert(i);
     }
@@ -69,14 +64,14 @@ public class TREETest {
         assertTrue(instance.contains(10));
     }
 
-   @Test
+    @Test
     public void testContainsElemAllOthers(){
-       assertTrue(instance.contains(13));
-       assertTrue(instance.contains(8));
-       assertTrue(instance.contains(17));
-       assertTrue(instance.contains(40));
-       assertTrue(instance.contains(50));
-       assertTrue(instance.contains(7));
+        assertTrue(instance.contains(13));
+        assertTrue(instance.contains(8));
+        assertTrue(instance.contains(17));
+        assertTrue(instance.contains(40));
+        assertTrue(instance.contains(50));
+        assertTrue(instance.contains(7));
     }
 
     @Test
@@ -142,16 +137,16 @@ public class TREETest {
     public void perfectBalancedFalse() {
         // test tree is not balanced
         System.out.println("Unbalanced Tree Test");
-        assertEquals(false, instance.perfectBalanced());
+        assertFalse(instance.perfectBalanced());
     }
 
     @Test
     public void perfectBalancedTrue() {
         // test on a balanced tree
         System.out.println("Perfectly Balanced Tree Test");
-        assertEquals(true, instance2.perfectBalanced());
+        assertTrue(instance2.perfectBalanced());
 
-        }
+    }
 
 
 
@@ -174,7 +169,7 @@ public class TREETest {
     @Test
     public void testconstrucTreeposOrder() {
         System.out.println("construct Tree posOrder ");
-        ArrayList<Integer> posOrder = new  ArrayList(Arrays.asList(posorderT));
+        ArrayList<Integer> posOrder = new  ArrayList<>(Arrays.asList(posorderT));
         TREE<Integer> newTree = (TREE<Integer>) instance.construcTreeposOrder(posOrder);
 
         assertEquals(Arrays.asList(inorderT), newTree.preOrder());

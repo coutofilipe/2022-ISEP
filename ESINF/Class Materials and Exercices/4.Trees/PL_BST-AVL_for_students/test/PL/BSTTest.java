@@ -1,4 +1,3 @@
-
 package PL;
 
 import org.junit.Before;
@@ -29,7 +28,7 @@ public class BSTTest {
 
     @Before
     public void setUp(){
-        instance = new BST();
+        instance = new BST<>();
         for(int i :arr)
             instance.insert(i);
     }
@@ -41,7 +40,7 @@ public class BSTTest {
         System.out.println("size");
         assertEquals("size should be = 10",instance.size(), arr.length);
 
-        BST<String> sInstance = new BST();
+        BST<String> sInstance = new BST<>();
         assertEquals("size should be = 0",sInstance.size(), 0);
         sInstance.insert("A");
         assertEquals("size should be = 1",sInstance.size(), 1);
@@ -57,8 +56,8 @@ public class BSTTest {
     @Test
     public void testInsert() {
         System.out.println("insert");
-        int arr[] = {20,15,10,13,8,17,40,50,30,20,15,10};
-        BST<Integer> instance = new BST();
+        int[] arr = {20,15,10,13,8,17,40,50,30,20,15,10};
+        BST<Integer> instance = new BST<>();
         for (int i=0; i<9; i++){            //new elements
             instance.insert(arr[i]);
             assertEquals("size should be = "+(i+1),instance.size(), i+1);
@@ -79,10 +78,10 @@ public class BSTTest {
         instance.remove(999);
 
         assertEquals("size should be = "+qtd, instance.size(), qtd);
-        for (int i=0; i<arr.length; i++){
-            instance.remove(arr[i]);
+        for (Integer integer : arr) {
+            instance.remove(integer);
             qtd--;
-            assertEquals("size should be = "+qtd, qtd,instance.size());
+            assertEquals("size should be = " + qtd, qtd, instance.size());
         }
 
         instance.remove(999);
@@ -96,7 +95,7 @@ public class BSTTest {
         System.out.println("isempty");
 
         assertFalse("the BST should be NOT empty", instance.isEmpty());
-        instance = new BST();
+        instance = new BST<>();
         assertTrue("the BST should be empty",instance.isEmpty());
 
         instance.insert(11);
@@ -112,13 +111,13 @@ public class BSTTest {
     public void testHeight() {
         System.out.println("height");
 
-        instance = new BST();
+        instance = new BST<>();
         assertEquals("height should be = -1", instance.height(), -1);
         for(int idx=0; idx<arr.length; idx++){
             instance.insert(arr[idx]);
             assertEquals("height should be = "+height[idx], instance.height(), height[idx]);
         }
-        instance = new BST();
+        instance = new BST<>();
         assertEquals("height should be = -1", instance.height(), -1);
     }
     /**
@@ -127,11 +126,11 @@ public class BSTTest {
     @Test
     public void testSmallestElement() {
         System.out.println("smallestElement");
-        assertEquals(new Integer(7), instance.smallestElement());
+        assertEquals(Integer.valueOf(7), instance.smallestElement());
         instance.remove(7);
-        assertEquals(new Integer(8), instance.smallestElement());
+        assertEquals(Integer.valueOf(8), instance.smallestElement());
         instance.remove(8);
-        assertEquals(new Integer(10), instance.smallestElement());
+        assertEquals(Integer.valueOf(10), instance.smallestElement());
     }
     /**
      * Test of processBstByLevel method, of class TREE.
@@ -139,12 +138,12 @@ public class BSTTest {
     @Test
     public void testProcessBstByLevel() {
         System.out.println("processbstbylevel");
-        Map<Integer,List<Integer>> expResult = new HashMap();
-        expResult.put(0, Arrays.asList(new Integer[]{20}));
-        expResult.put(1, Arrays.asList(new Integer[]{15,40}));
-        expResult.put(2, Arrays.asList(new Integer[]{10,17,30,50}));
-        expResult.put(3, Arrays.asList(new Integer[]{8,13}));
-        expResult.put(4, Arrays.asList(new Integer[]{7}));
+        Map<Integer,List<Integer>> expResult = new HashMap<>();
+        expResult.put(0, List.of(20));
+        expResult.put(1, Arrays.asList(15,40));
+        expResult.put(2, Arrays.asList(10,17,30,50));
+        expResult.put(3, Arrays.asList(8,13));
+        expResult.put(4, List.of(7));
 
         Map<Integer,List<Integer>> result = instance.nodesByLevel();
 
@@ -160,7 +159,7 @@ public class BSTTest {
     public void testInOrder() {
         System.out.println("inOrder");
         List<Integer> lExpected = Arrays.asList(inorderT);
-        assertEquals("inOrder should be "+lExpected.toString(), lExpected, instance.inOrder());
+        assertEquals("inOrder should be "+lExpected, lExpected, instance.inOrder());
     }
     /**
      * Test of preOrder method, of class BST.
@@ -169,7 +168,7 @@ public class BSTTest {
     public void testpreOrder() {
         System.out.println("preOrder");
         List<Integer> lExpected = Arrays.asList(preorderT);
-        assertEquals("preOrder should be "+lExpected.toString(), lExpected, instance.preOrder());
+        assertEquals("preOrder should be "+lExpected, lExpected, instance.preOrder());
     }
     /**
      * Test of posOrder method, of class BST.
@@ -178,6 +177,6 @@ public class BSTTest {
     public void testposOrder() {
         System.out.println("posOrder");
         List<Integer> lExpected = Arrays.asList(posorderT);
-        assertEquals("posOrder should be "+lExpected.toString(), lExpected, instance.posOrder());
+        assertEquals("posOrder should be "+lExpected, lExpected, instance.posOrder());
     }
 }

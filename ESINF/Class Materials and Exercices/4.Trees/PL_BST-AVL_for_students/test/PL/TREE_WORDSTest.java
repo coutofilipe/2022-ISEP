@@ -1,5 +1,3 @@
-
-
 package PL;
 
 import org.junit.Test;
@@ -11,7 +9,6 @@ import java.util.Map;
 import static org.junit.Assert.assertEquals;
 
 /**
- *
  * @author DEI-ESINF
  */
 public class TREE_WORDSTest {
@@ -29,25 +26,27 @@ public class TREE_WORDSTest {
         instance.createTree();
         System.out.println(instance);
     }
+
     /**
      * Test of getWordOccurrences method, of class TREE_WORDS.
      */
     @Test
     public void testGetWordsOcorrences() throws Exception {
         System.out.println("getwordsoccurrences");
-        int[] occurExpected = {1,2,3};
-        String[][] wordsExpected = {{"casaco","correu","do","estava","fecho","frio","pois"},    //1
-                {"Luis","a","disse","o","ola"},                                                 //2
-                {"Maria"} };                                                                    //3
+        int[] occurExpected = {1, 2, 3};
+        String[][] wordsExpected = {{"casaco", "correu", "do", "estava", "fecho", "frio", "pois"},    //1
+                {"Luis", "a", "disse", "o", "ola"},                                                 //2
+                {"Maria"}};                                                                    //3
 
         TREE_WORDS instance = new TREE_WORDS();
         instance.createTree();
-        Map<Integer,List<String>> occur = instance.getWordsOccurrences();
+        Map<Integer, List<String>> occur = instance.getWordsOccurrences();
 
-        int idx=0;
-        for(Map.Entry<Integer,List<String>> e: occur.entrySet()){
+        int idx = 0;
+        for (Map.Entry<Integer, List<String>> e : occur.entrySet()) {
             assertEquals(occurExpected[idx], e.getKey().intValue());
-            assertEquals( Arrays.asList(wordsExpected[idx++]), e.getValue());
+            assertEquals(Arrays.asList(wordsExpected[idx++]), e.getValue());
         }
     }
 }
+

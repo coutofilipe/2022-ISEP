@@ -97,14 +97,17 @@ public class PriorityBufferPrinter<E extends Document> implements Iterable<E> {
      * @param size the size above which documents will be deleted
      * @return true if there is at least one Document size
      */
-    public Boolean delDocumentsAbove(Integer size) {
-        for (E doc : buffer) {
-            if (doc.getSize() > size) {
-                buffer.remove(doc);
-                return true;
-            } else return false;
+    public Boolean delDocumentsAboveSize(Integer size) {
+        boolean flag = false;
+        Iterator<E> iterator = buffer.iterator();
+        while (iterator.hasNext()) {
+            E doc = iterator.next();
+            if (doc.getSize() >= size) {
+                flag = true;
+                iterator.remove();
+            }
         }
-        return true;
+        return flag;
     }
 
     @Override

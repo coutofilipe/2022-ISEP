@@ -116,7 +116,9 @@ public class TREE<E extends Comparable<E>> extends BST<E> {
 
     public E lowestCommonAncestor(E elem1, E elem2) {
 
+        // ver qual é o nó que tem o elem 2 à direita e o elem1 à esquerda
         throw new UnsupportedOperationException("Not supported yet.");
+
     }
 
     private Node<E> lowestCommonAncestor(Node<E> node, E elem1, E elem2) {
@@ -126,8 +128,11 @@ public class TREE<E extends Comparable<E>> extends BST<E> {
 
 
     public BST<E> minCompletSubtree(E elem1, E elem2) {
+        // usar o método minimo ancestral comumn para encontrar a root da novas sub-arvore;
+        // usar a travessia em por niveis passando essa root EXAME!!!!!
 
         throw new UnsupportedOperationException("Not supported yet.");
+
     }
 
 

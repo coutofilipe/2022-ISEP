@@ -15,7 +15,7 @@ public class TextWord implements Comparable<TextWord> {
         this.ocorrences = ocorrences;
     }
 
-    public void incOcorrences() { this.ocorrences++; }
+    public void incrementOcorrences() { this.ocorrences++; }
 
     public String getWord() { return word; }
 

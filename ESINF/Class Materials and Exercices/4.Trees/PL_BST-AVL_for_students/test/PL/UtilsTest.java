@@ -1,17 +1,18 @@
-
 package PL;
+
+import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  *
  * @author DEI-ESINF
  */
 public class UtilsTest {
-    
+
     public UtilsTest() {
     }
 
@@ -25,8 +26,8 @@ public class UtilsTest {
 
         List<Integer> lIntIni = Arrays.asList(12,4,8,2,4,5,78,1,6);
         List<Integer> lIntRes = Arrays.asList(1,2,4,5,6,8,12,78);
-        
+
         assertEquals(lIntRes, Utils.sortByBST(lIntIni));
         assertEquals(lStrRes, Utils.sortByBST(lStrIni));
-    } 
+    }
 }
